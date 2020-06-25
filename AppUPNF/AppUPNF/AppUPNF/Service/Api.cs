@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Xamarin.Forms;
 
-namespace AppUPNF.App.Service
+namespace AppUPNF.Service
 {
     public class Api
     {

@@ -1,5 +1,5 @@
 ﻿using System;
-namespace AppUPNF.App.Service
+namespace AppUPNF.Service
 {
     public class Token
     {
