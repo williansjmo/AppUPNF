@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModel="clr-namespace:AppUPNF.ViewModel"
+             mc:Ignorable="d"
+             x:Class="AppUPNF.Page.VistasAsignadasPage">
+
+    <ContentPage.BindingContext>
+        <viewModel:VistasAsignadasViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView SeparatorColor="Black" ItemsSource="{Binding VistasAsignadas}" HasUnevenRows="True">
+                <ListView.Header>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Tipo ID" TextColor="Olive" />
+                        <Label Text="No. ID" TextColor="Olive" />
+                        <Label Text="Solicitante" TextColor="Olive" />
+                        <Label Text="No. de solicitud" TextColor="Olive" />
+                        <Label Text="Estado" TextColor="Olive" />
+                    </StackLayout>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="80">
+                            <Grid Margin="10,5,0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70"/>
+                                    <ColumnDefinition Width="70"/>
+                                    <ColumnDefinition Width="70"/>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="90"/>
+                                    <ColumnDefinition Width="100"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding TipoIdentificacion}" Grid.Column="0"
+                                       FontSize="12" TextColor="Black"
+                                     HorizontalOptions="FillAndExpand"/>
+                                
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
